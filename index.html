@@ -1,0 +1,1584 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Viteon Soluções Integradas - Empresa de tecnologia e inovação especializada em desenvolvimento de software, consultoria em TI, marketing digital e treinamento profissional.">
+<meta name="keywords" content="Viteon, tecnologia, desenvolvimento de software, consultoria TI, marketing digital, Barueri, São Paulo">
+<meta name="author" content="Viteon Soluções Integradas LTDA">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="Viteon Soluções Integradas">
+<meta property="og:description" content="Tecnologia, inovação e soluções integradas para o seu negócio.">
+<meta property="og:url" content="https://viteon.com.br">
+<meta property="og:type" content="website">
+<title>Viteon Soluções Integradas - Tecnologia e Inovação</title>
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' fill='%23000'/%3E%3Ctext x='50' y='65' font-size='50' font-weight='900' text-anchor='middle' fill='%23e10600' font-family='Arial'%3EV%3C/text%3E%3C/svg%3E">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --preto:#0a0a0a;
+  --preto-2:#141414;
+  --preto-3:#1c1c1c;
+  --vermelho:#e10600;
+  --vermelho-escuro:#a30400;
+  --vermelho-claro:#ff2a1f;
+  --branco:#ffffff;
+  --cinza:#a8a8a8;
+  --cinza-claro:#f5f5f5;
+  --cinza-escuro:#2a2a2a;
+}
+html{scroll-behavior:smooth;scroll-padding-top:80px}
+body{
+  font-family:'Segoe UI',Tahoma,Geneva,Verdana,sans-serif;
+  line-height:1.6;
+  color:var(--preto);
+  background:var(--branco);
+  overflow-x:hidden;
+}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+ul{list-style:none}
+.container{max-width:1200px;margin:0 auto;padding:0 24px}
+
+/* === HEADER === */
+header{
+  position:fixed;
+  top:0;left:0;right:0;
+  background:rgba(10,10,10,0.97);
+  backdrop-filter:blur(10px);
+  z-index:1000;
+  border-bottom:2px solid var(--vermelho);
+  transition:all .3s ease;
+}
+.nav-wrapper{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:18px 24px;
+  max-width:1200px;
+  margin:0 auto;
+}
+.logo{
+  display:flex;align-items:center;gap:10px;
+  font-size:28px;font-weight:900;
+  color:var(--branco);
+  letter-spacing:1px;
+  cursor:pointer;
+}
+.logo-icon{
+  width:42px;height:42px;
+  background:var(--vermelho);
+  display:flex;align-items:center;justify-content:center;
+  font-size:24px;font-weight:900;
+  color:var(--branco);
+  border-radius:6px;
+  box-shadow:0 4px 12px rgba(225,6,0,0.4);
+}
+.logo span{color:var(--vermelho)}
+nav ul{display:flex;gap:32px}
+nav a{
+  color:var(--branco);
+  font-weight:500;
+  font-size:15px;
+  position:relative;
+  padding:6px 0;
+  transition:color .3s;
+  cursor:pointer;
+}
+nav a:hover,nav a.active{color:var(--vermelho)}
+nav a::after{
+  content:'';
+  position:absolute;
+  bottom:0;left:0;
+  width:0;height:2px;
+  background:var(--vermelho);
+  transition:width .3s;
+}
+nav a:hover::after,nav a.active::after{width:100%}
+.menu-toggle{
+  display:none;
+  background:none;border:none;
+  color:var(--branco);
+  font-size:28px;
+  cursor:pointer;
+}
+
+/* === HERO === */
+.hero{
+  min-height:100vh;
+  display:flex;align-items:center;
+  background:linear-gradient(135deg,var(--preto) 0%,var(--preto-2) 50%,#2a0000 100%);
+  position:relative;overflow:hidden;
+  padding-top:80px;
+}
+.hero::before{
+  content:'';
+  position:absolute;
+  top:-50%;right:-20%;
+  width:800px;height:800px;
+  background:radial-gradient(circle,rgba(225,6,0,0.15) 0%,transparent 70%);
+  border-radius:50%;
+}
+.hero::after{
+  content:'';
+  position:absolute;
+  bottom:-30%;left:-10%;
+  width:600px;height:600px;
+  background:radial-gradient(circle,rgba(225,6,0,0.08) 0%,transparent 70%);
+  border-radius:50%;
+}
+.hero-content{
+  position:relative;z-index:2;
+  max-width:800px;
+}
+.hero-tag{
+  display:inline-block;
+  padding:8px 18px;
+  background:rgba(225,6,0,0.15);
+  border:1px solid var(--vermelho);
+  color:var(--vermelho-claro);
+  font-size:13px;font-weight:600;
+  letter-spacing:2px;text-transform:uppercase;
+  border-radius:30px;
+  margin-bottom:24px;
+}
+.hero h1{
+  font-size:56px;
+  font-weight:900;
+  color:var(--branco);
+  line-height:1.1;
+  margin-bottom:24px;
+  letter-spacing:-1px;
+}
+.hero h1 span{color:var(--vermelho)}
+.hero p{
+  font-size:19px;
+  color:var(--cinza);
+  margin-bottom:36px;
+  max-width:600px;
+}
+.btn-group{display:flex;gap:16px;flex-wrap:wrap}
+.btn{
+  display:inline-block;
+  padding:16px 36px;
+  font-weight:700;font-size:15px;
+  text-transform:uppercase;letter-spacing:1px;
+  border:none;cursor:pointer;
+  transition:all .3s ease;
+  border-radius:4px;
+}
+.btn-primary{
+  background:var(--vermelho);
+  color:var(--branco);
+  box-shadow:0 6px 20px rgba(225,6,0,0.4);
+}
+.btn-primary:hover{
+  background:var(--vermelho-escuro);
+  transform:translateY(-3px);
+  box-shadow:0 10px 28px rgba(225,6,0,0.5);
+}
+.btn-outline{
+  background:transparent;
+  color:var(--branco);
+  border:2px solid var(--branco);
+}
+.btn-outline:hover{
+  background:var(--branco);
+  color:var(--preto);
+  transform:translateY(-3px);
+}
+
+/* === SECTIONS === */
+section{padding:100px 0;scroll-margin-top:80px}
+.section-title{
+  text-align:center;
+  margin-bottom:60px;
+}
+.section-title small{
+  display:block;
+  color:var(--vermelho);
+  font-weight:700;
+  font-size:14px;
+  text-transform:uppercase;
+  letter-spacing:3px;
+  margin-bottom:12px;
+}
+.section-title h2{
+  font-size:42px;
+  font-weight:900;
+  color:var(--preto);
+  margin-bottom:16px;
+  letter-spacing:-1px;
+}
+.section-title h2 span{color:var(--vermelho)}
+.section-title .divider{
+  width:60px;height:4px;
+  background:var(--vermelho);
+  margin:0 auto;
+}
+.section-title p{
+  color:var(--cinza);
+  max-width:600px;
+  margin:20px auto 0;
+  font-size:17px;
+}
+
+/* === SOBRE === */
+.sobre{background:var(--cinza-claro)}
+.sobre-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:60px;
+  align-items:center;
+}
+.sobre-img{
+  background:linear-gradient(135deg,var(--preto) 0%,var(--vermelho-escuro) 100%);
+  height:480px;
+  border-radius:8px;
+  position:relative;
+  overflow:hidden;
+  display:flex;align-items:center;justify-content:center;
+  box-shadow:0 20px 50px rgba(0,0,0,0.2);
+}
+.sobre-img-content{
+  text-align:center;
+  color:var(--branco);
+  padding:40px;
+  z-index:2;
+}
+.sobre-img-content .num{
+  font-size:120px;
+  font-weight:900;
+  line-height:1;
+  color:var(--vermelho-claro);
+  text-shadow:4px 4px 0 rgba(0,0,0,0.3);
+}
+.sobre-img-content .desc{
+  font-size:22px;
+  font-weight:600;
+  margin-top:8px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+}
+.sobre-img::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;right:0;bottom:0;
+  background:repeating-linear-gradient(45deg,transparent 0,transparent 20px,rgba(255,255,255,0.03) 20px,rgba(255,255,255,0.03) 22px);
+}
+.sobre-text h3{
+  font-size:32px;
+  font-weight:800;
+  margin-bottom:20px;
+  color:var(--preto);
+}
+.sobre-text h3 span{color:var(--vermelho)}
+.sobre-text p{
+  color:#444;
+  margin-bottom:18px;
+  font-size:16px;
+}
+.cnpj-box{
+  margin-top:24px;padding:18px 22px;
+  background:var(--preto);
+  color:var(--branco);
+  border-left:4px solid var(--vermelho);
+  border-radius:4px;
+  font-size:14px;
+}
+.cnpj-box strong{color:var(--vermelho-claro)}
+
+/* === MISSAO/VISAO/VALORES === */
+.mvv{margin-top:80px}
+.mvv-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+}
+.mvv-card{
+  background:var(--branco);
+  padding:40px 30px;
+  border-radius:8px;
+  border-top:5px solid var(--vermelho);
+  box-shadow:0 8px 25px rgba(0,0,0,0.08);
+  transition:transform .3s, box-shadow .3s;
+}
+.mvv-card:hover{
+  transform:translateY(-8px);
+  box-shadow:0 16px 40px rgba(0,0,0,0.15);
+}
+.mvv-card .icon{
+  width:60px;height:60px;
+  background:var(--preto);
+  color:var(--vermelho);
+  display:flex;align-items:center;justify-content:center;
+  font-size:28px;font-weight:900;
+  border-radius:50%;
+  margin-bottom:20px;
+}
+.mvv-card h4{
+  font-size:22px;
+  font-weight:800;
+  margin-bottom:12px;
+  color:var(--preto);
+}
+.mvv-card p{color:#555;font-size:15px}
+.mvv-card ul{margin-top:10px}
+.mvv-card ul li{
+  padding:6px 0 6px 20px;
+  position:relative;
+  color:#555;
+  font-size:14px;
+}
+.mvv-card ul li::before{
+  content:'■';
+  position:absolute;
+  left:0;
+  color:var(--vermelho);
+}
+
+/* === SERVIÇOS === */
+.servicos{background:var(--branco)}
+.servicos-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:28px;
+}
+.servico-card{
+  background:var(--branco);
+  padding:36px 28px;
+  border-radius:8px;
+  border:1px solid #e8e8e8;
+  transition:all .3s ease;
+  position:relative;
+  overflow:hidden;
+}
+.servico-card::before{
+  content:'';
+  position:absolute;
+  top:0;left:0;
+  width:0;height:4px;
+  background:var(--vermelho);
+  transition:width .4s ease;
+}
+.servico-card:hover::before{width:100%}
+.servico-card:hover{
+  transform:translateY(-6px);
+  border-color:var(--vermelho);
+  box-shadow:0 14px 40px rgba(225,6,0,0.12);
+}
+.servico-icon{
+  width:64px;height:64px;
+  background:linear-gradient(135deg,var(--preto) 0%,var(--cinza-escuro) 100%);
+  color:var(--vermelho);
+  display:flex;align-items:center;justify-content:center;
+  font-size:30px;font-weight:900;
+  border-radius:8px;
+  margin-bottom:20px;
+}
+.servico-card h4{
+  font-size:20px;
+  font-weight:800;
+  margin-bottom:12px;
+  color:var(--preto);
+}
+.servico-card p{color:#555;font-size:15px;line-height:1.7}
+
+/* === CTA STRIP === */
+.cta-strip{
+  background:linear-gradient(135deg,var(--preto) 0%,#2a0000 50%,var(--vermelho-escuro) 100%);
+  color:var(--branco);
+  padding:80px 0;
+  text-align:center;
+}
+.cta-strip h3{
+  font-size:36px;
+  font-weight:900;
+  margin-bottom:18px;
+}
+.cta-strip h3 span{color:var(--vermelho-claro)}
+.cta-strip p{
+  font-size:18px;
+  color:var(--cinza);
+  margin-bottom:32px;
+  max-width:600px;
+  margin-left:auto;margin-right:auto;
+}
+
+/* === CONTATO === */
+.contato{background:var(--cinza-claro)}
+.contato-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:40px;
+}
+.contato-info{
+  background:var(--preto);
+  color:var(--branco);
+  padding:50px 40px;
+  border-radius:8px;
+}
+.contato-info h3{
+  font-size:28px;
+  font-weight:800;
+  margin-bottom:30px;
+  color:var(--branco);
+}
+.contato-info h3 span{color:var(--vermelho)}
+.contato-item{
+  display:flex;
+  align-items:flex-start;
+  gap:18px;
+  padding:18px 0;
+  border-bottom:1px solid #2a2a2a;
+}
+.contato-item:last-child{border-bottom:none}
+.contato-item .icon{
+  width:48px;height:48px;
+  min-width:48px;
+  background:var(--vermelho);
+  display:flex;align-items:center;justify-content:center;
+  border-radius:8px;
+  font-size:18px;font-weight:900;
+  color:var(--branco);
+}
+.contato-item .info-text{flex:1}
+.contato-item .info-text strong{
+  display:block;
+  color:var(--vermelho-claro);
+  font-size:13px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:4px;
+}
+.contato-item .info-text span,.contato-item .info-text a{
+  color:var(--branco);
+  font-size:15px;
+  line-height:1.5;
+}
+.contato-item .info-text a:hover{color:var(--vermelho-claro)}
+
+.contato-form{
+  background:var(--branco);
+  padding:50px 40px;
+  border-radius:8px;
+  box-shadow:0 8px 30px rgba(0,0,0,0.08);
+}
+.contato-form h3{
+  font-size:28px;
+  font-weight:800;
+  margin-bottom:24px;
+  color:var(--preto);
+}
+.form-group{margin-bottom:20px}
+.form-group label{
+  display:block;
+  font-weight:600;
+  color:var(--preto);
+  margin-bottom:6px;
+  font-size:14px;
+}
+.form-group input,.form-group textarea,.form-group select{
+  width:100%;
+  padding:14px 16px;
+  border:1px solid #ddd;
+  border-radius:6px;
+  font-size:15px;
+  font-family:inherit;
+  transition:border .3s, box-shadow .3s;
+}
+.form-group input:focus,.form-group textarea:focus,.form-group select:focus{
+  outline:none;
+  border-color:var(--vermelho);
+  box-shadow:0 0 0 3px rgba(225,6,0,0.1);
+}
+.form-group textarea{resize:vertical;min-height:120px}
+.form-check{
+  display:flex;align-items:flex-start;gap:10px;
+  margin-bottom:20px;
+  font-size:13px;color:#555;
+}
+.form-check input{margin-top:3px}
+
+/* === LEGAL PAGES === */
+.page{display:none}
+.page.active{display:block}
+.legal-page{
+  padding:140px 0 80px;
+  background:var(--branco);
+  min-height:100vh;
+}
+.legal-content{max-width:900px;margin:0 auto}
+.legal-content h1{
+  font-size:42px;
+  font-weight:900;
+  color:var(--preto);
+  margin-bottom:8px;
+  border-bottom:4px solid var(--vermelho);
+  padding-bottom:16px;
+}
+.legal-content .updated{
+  color:var(--cinza);
+  font-size:14px;
+  margin-bottom:36px;
+  font-style:italic;
+}
+.legal-content h2{
+  font-size:24px;
+  font-weight:800;
+  color:var(--vermelho);
+  margin:36px 0 14px;
+  padding-left:12px;
+  border-left:4px solid var(--vermelho);
+}
+.legal-content h3{
+  font-size:18px;
+  font-weight:700;
+  color:var(--preto);
+  margin:24px 0 10px;
+}
+.legal-content p{
+  margin-bottom:14px;
+  color:#333;
+  font-size:15px;
+  line-height:1.8;
+  text-align:justify;
+}
+.legal-content ul,.legal-content ol{
+  margin:14px 0 14px 30px;
+  color:#333;
+  font-size:15px;
+  line-height:1.8;
+}
+.legal-content ul li,.legal-content ol li{
+  margin-bottom:8px;
+  list-style:disc;
+}
+.legal-content ol li{list-style:decimal}
+.legal-content strong{color:var(--preto)}
+.legal-content a{color:var(--vermelho);text-decoration:underline}
+.legal-content .highlight-box{
+  background:#fff5f5;
+  border-left:4px solid var(--vermelho);
+  padding:20px 24px;
+  margin:24px 0;
+  border-radius:4px;
+}
+.legal-content .highlight-box p{margin-bottom:0}
+.back-link{
+  display:inline-flex;
+  align-items:center;
+  gap:8px;
+  color:var(--vermelho);
+  font-weight:600;
+  margin-bottom:24px;
+  cursor:pointer;
+  transition:gap .3s;
+}
+.back-link:hover{gap:14px}
+
+/* === EXCLUSAO DE DADOS === */
+.exclusao-form-box{
+  background:var(--cinza-claro);
+  padding:30px;
+  border-radius:8px;
+  margin:30px 0;
+  border:2px dashed var(--vermelho);
+}
+.exclusao-form-box h3{margin-top:0;color:var(--vermelho)}
+
+/* === FOOTER === */
+footer{
+  background:var(--preto);
+  color:var(--cinza);
+  padding:70px 0 0;
+}
+.footer-grid{
+  display:grid;
+  grid-template-columns:1.5fr 1fr 1fr 1fr;
+  gap:40px;
+  margin-bottom:50px;
+}
+.footer-col h5{
+  color:var(--branco);
+  font-size:16px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  margin-bottom:20px;
+  padding-bottom:10px;
+  border-bottom:2px solid var(--vermelho);
+  display:inline-block;
+}
+.footer-col p,.footer-col a{
+  color:var(--cinza);
+  font-size:14px;
+  line-height:1.8;
+}
+.footer-col ul li{margin-bottom:8px}
+.footer-col a{
+  cursor:pointer;
+  transition:color .3s, padding-left .3s;
+  display:inline-block;
+}
+.footer-col a:hover{
+  color:var(--vermelho-claro);
+  padding-left:6px;
+}
+.footer-logo{
+  display:flex;align-items:center;gap:10px;
+  font-size:26px;font-weight:900;
+  color:var(--branco);
+  margin-bottom:18px;
+}
+.footer-logo span{color:var(--vermelho)}
+.footer-cnpj{
+  background:var(--preto-3);
+  padding:12px 16px;
+  border-left:3px solid var(--vermelho);
+  margin-top:16px;
+  font-size:13px;
+  border-radius:4px;
+}
+.footer-cnpj strong{color:var(--branco);display:block;margin-bottom:4px}
+.footer-bottom{
+  border-top:1px solid #2a2a2a;
+  padding:24px 0;
+  text-align:center;
+  font-size:13px;
+  color:#777;
+}
+.footer-bottom span{color:var(--vermelho-claro)}
+
+/* === COOKIE BANNER === */
+.cookie-banner{
+  position:fixed;
+  bottom:0;left:0;right:0;
+  background:var(--preto);
+  color:var(--branco);
+  padding:24px;
+  z-index:9999;
+  border-top:3px solid var(--vermelho);
+  box-shadow:0 -8px 30px rgba(0,0,0,0.3);
+  transform:translateY(100%);
+  transition:transform .5s ease;
+}
+.cookie-banner.show{transform:translateY(0)}
+.cookie-content{
+  max-width:1200px;
+  margin:0 auto;
+  display:flex;
+  align-items:center;
+  gap:30px;
+  flex-wrap:wrap;
+}
+.cookie-text{flex:1;min-width:300px}
+.cookie-text h4{
+  font-size:18px;
+  margin-bottom:8px;
+  color:var(--vermelho-claro);
+}
+.cookie-text p{font-size:14px;color:var(--cinza);line-height:1.5}
+.cookie-text a{color:var(--vermelho-claro);text-decoration:underline;cursor:pointer}
+.cookie-actions{display:flex;gap:12px;flex-wrap:wrap}
+.cookie-actions button{
+  padding:12px 24px;
+  font-size:14px;
+  font-weight:700;
+  border:none;cursor:pointer;
+  border-radius:4px;
+  text-transform:uppercase;
+  letter-spacing:1px;
+  transition:all .3s;
+}
+.btn-accept{background:var(--vermelho);color:var(--branco)}
+.btn-accept:hover{background:var(--vermelho-escuro)}
+.btn-reject{background:transparent;color:var(--branco);border:2px solid var(--cinza)!important}
+.btn-reject:hover{border-color:var(--branco)!important}
+
+/* === MENSAGEM SUCESSO === */
+.alert-success{
+  background:#d4edda;
+  color:#155724;
+  padding:14px 18px;
+  border-radius:6px;
+  margin-bottom:20px;
+  border-left:4px solid #28a745;
+  display:none;
+}
+.alert-success.show{display:block}
+
+/* === RESPONSIVE === */
+@media (max-width:992px){
+  .hero h1{font-size:42px}
+  .sobre-grid,.contato-grid{grid-template-columns:1fr;gap:40px}
+  .mvv-grid,.servicos-grid{grid-template-columns:repeat(2,1fr)}
+  .footer-grid{grid-template-columns:repeat(2,1fr)}
+  .section-title h2{font-size:34px}
+}
+@media (max-width:768px){
+  nav{
+    position:fixed;
+    top:72px;left:0;right:0;
+    background:var(--preto);
+    padding:0;
+    max-height:0;
+    overflow:hidden;
+    transition:max-height .4s ease;
+    border-bottom:2px solid var(--vermelho);
+  }
+  nav.open{max-height:500px}
+  nav ul{
+    flex-direction:column;
+    gap:0;
+    padding:20px 0;
+  }
+  nav ul li{
+    border-bottom:1px solid #1f1f1f;
+  }
+  nav a{
+    display:block;
+    padding:16px 30px;
+  }
+  .menu-toggle{display:block}
+  .hero{padding-top:120px;min-height:auto;padding-bottom:80px}
+  .hero h1{font-size:34px}
+  .hero p{font-size:16px}
+  section{padding:70px 0}
+  .section-title h2{font-size:28px}
+  .mvv-grid,.servicos-grid,.footer-grid{grid-template-columns:1fr}
+  .sobre-img{height:340px}
+  .sobre-img-content .num{font-size:80px}
+  .legal-content h1{font-size:28px}
+  .legal-content h2{font-size:20px}
+  .cookie-content{flex-direction:column;align-items:stretch}
+  .cookie-actions{justify-content:stretch}
+  .cookie-actions button{flex:1}
+  .contato-info,.contato-form{padding:34px 24px}
+  .cta-strip h3{font-size:26px}
+}
+@media (max-width:480px){
+  .hero h1{font-size:28px}
+  .btn{padding:14px 24px;font-size:13px}
+  .btn-group{flex-direction:column}
+  .btn-group .btn{width:100%;text-align:center}
+}
+</style>
+</head>
+<body>
+
+<!-- ============= HEADER ============= -->
+<header>
+  <div class="nav-wrapper">
+    <div class="logo" onclick="showPage('home')">
+      <div class="logo-icon">V</div>
+      <div>VITE<span>ON</span></div>
+    </div>
+    <button class="menu-toggle" onclick="toggleMenu()" aria-label="Abrir menu">☰</button>
+    <nav id="mainNav">
+      <ul>
+        <li><a onclick="showPage('home');navTo('home-section')">Início</a></li>
+        <li><a onclick="showPage('home');navTo('sobre')">Sobre</a></li>
+        <li><a onclick="showPage('home');navTo('servicos')">Serviços</a></li>
+        <li><a onclick="showPage('home');navTo('contato')">Contato</a></li>
+        <li><a onclick="showPage('privacidade')">Privacidade</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- ============= PÁGINA HOME ============= -->
+<div class="page active" id="page-home">
+
+  <!-- HERO -->
+  <section class="hero" id="home-section">
+    <div class="container hero-content">
+      <span class="hero-tag">Tecnologia • Inovação • Resultados</span>
+      <h1>Transformando ideias em<br><span>soluções digitais</span> de alto impacto</h1>
+      <p>Somos a Viteon. Desenvolvemos software, oferecemos consultoria em TI, criamos estratégias de marketing digital e capacitamos profissionais para a era digital. Sua transformação começa aqui.</p>
+      <div class="btn-group">
+        <a class="btn btn-primary" onclick="navTo('servicos')">Conheça Nossos Serviços</a>
+        <a class="btn btn-outline" onclick="navTo('contato')">Fale Conosco</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- SOBRE -->
+  <section class="sobre" id="sobre">
+    <div class="container">
+      <div class="section-title">
+        <small>Quem Somos</small>
+        <h2>Sobre a <span>Viteon</span></h2>
+        <div class="divider"></div>
+      </div>
+
+      <div class="sobre-grid">
+        <div class="sobre-img">
+          <div class="sobre-img-content">
+            <div class="num">+</div>
+            <div class="desc">Soluções Integradas<br>Para Seu Negócio</div>
+          </div>
+        </div>
+        <div class="sobre-text">
+          <h3>Tecnologia que <span>impulsiona</span> negócios</h3>
+          <p>A <strong>Viteon Soluções Integradas LTDA</strong> nasceu da convicção de que tecnologia, conhecimento e estratégia, quando combinados, criam resultados extraordinários. Atuamos como parceiros estratégicos de empresas que buscam evoluir no ambiente digital.</p>
+          <p>Reunimos profissionais qualificados em desenvolvimento de software, consultoria em tecnologia da informação, marketing digital, produção de conteúdo e treinamento profissional, oferecendo um portfólio completo e integrado de serviços.</p>
+          <p>Atendemos empresas de diversos portes e segmentos com soluções personalizadas, escaláveis e em conformidade com a legislação brasileira, em especial a Lei Geral de Proteção de Dados (LGPD).</p>
+          <div class="cnpj-box">
+            <strong>Razão Social:</strong> Viteon Soluções Integradas LTDA<br>
+            <strong>CNPJ:</strong> 66.492.459/0001-68<br>
+            <strong>Sede:</strong> Alameda Rio Negro, 503, Sala 2020 – Barueri/SP – CEP 06454-000
+          </div>
+        </div>
+      </div>
+
+      <!-- MVV -->
+      <div class="mvv">
+        <div class="mvv-grid">
+          <div class="mvv-card">
+            <div class="icon">M</div>
+            <h4>Missão</h4>
+            <p>Oferecer soluções tecnológicas integradas e estratégias inovadoras que impulsionem o crescimento sustentável dos nossos clientes, sempre com excelência, ética e compromisso com resultados mensuráveis.</p>
+          </div>
+          <div class="mvv-card">
+            <div class="icon">V</div>
+            <h4>Visão</h4>
+            <p>Ser referência nacional em soluções integradas de tecnologia, marketing digital e capacitação profissional, reconhecida pela qualidade técnica, capacidade de inovação e impacto positivo na transformação digital de empresas.</p>
+          </div>
+          <div class="mvv-card">
+            <div class="icon">V</div>
+            <h4>Valores</h4>
+            <ul>
+              <li>Ética e transparência em todas as relações</li>
+              <li>Inovação contínua e excelência técnica</li>
+              <li>Compromisso com resultados do cliente</li>
+              <li>Respeito à privacidade e proteção de dados</li>
+              <li>Responsabilidade social e ambiental</li>
+              <li>Valorização das pessoas</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SERVIÇOS -->
+  <section class="servicos" id="servicos">
+    <div class="container">
+      <div class="section-title">
+        <small>O Que Fazemos</small>
+        <h2>Nossos <span>Serviços</span></h2>
+        <div class="divider"></div>
+        <p>Soluções integradas e personalizadas para cada estágio da jornada digital da sua empresa.</p>
+      </div>
+
+      <div class="servicos-grid">
+        <div class="servico-card">
+          <div class="servico-icon">&lt;/&gt;</div>
+          <h4>Desenvolvimento de Software</h4>
+          <p>Desenvolvimento sob medida de sistemas web, aplicativos mobile, APIs, integrações, plataformas SaaS e soluções customizadas conforme as necessidades específicas do seu negócio.</p>
+        </div>
+        <div class="servico-card">
+          <div class="servico-icon">⚙</div>
+          <h4>Consultoria em TI</h4>
+          <p>Diagnóstico, planejamento estratégico de TI, governança, migração para nuvem, segurança da informação, conformidade com a LGPD e modernização de infraestrutura tecnológica.</p>
+        </div>
+        <div class="servico-card">
+          <div class="servico-icon">◉</div>
+          <h4>Portais e Provedores de Conteúdo</h4>
+          <p>Criação e operação de portais web, plataformas de conteúdo, marketplaces, áreas de membros e soluções digitais que conectam empresas aos seus públicos.</p>
+        </div>
+        <div class="servico-card">
+          <div class="servico-icon">📣</div>
+          <h4>Marketing Digital</h4>
+          <p>Estratégias completas de marketing digital incluindo SEO, mídia paga, gestão de redes sociais, e-mail marketing, automação e funis de conversão orientados a dados.</p>
+        </div>
+        <div class="servico-card">
+          <div class="servico-icon">★</div>
+          <h4>Promoção de Vendas</h4>
+          <p>Planejamento e execução de campanhas promocionais, ativações comerciais, programas de incentivo e estratégias para alavancar resultados de vendas e fidelização.</p>
+        </div>
+        <div class="servico-card">
+          <div class="servico-icon">🎓</div>
+          <h4>Treinamento Profissional</h4>
+          <p>Cursos, workshops e programas de capacitação em tecnologia, marketing digital, vendas e desenvolvimento profissional, presenciais e online, para empresas e profissionais.</p>
+        </div>
+        <div class="servico-card">
+          <div class="servico-icon">✎</div>
+          <h4>Produção de Conteúdo</h4>
+          <p>Produção editorial, audiovisual e digital de alta qualidade, incluindo textos, vídeos, podcasts, materiais educacionais e conteúdo institucional para diversos canais.</p>
+        </div>
+        <div class="servico-card">
+          <div class="servico-icon">⇄</div>
+          <h4>Intermediação de Negócios</h4>
+          <p>Conexão estratégica entre empresas, parceiros e oportunidades comerciais, viabilizando contratos, parcerias e novos negócios em mercados nacional e internacional.</p>
+        </div>
+        <div class="servico-card">
+          <div class="servico-icon">💬</div>
+          <h4>Soluções com WhatsApp Business API</h4>
+          <p>Implementação oficial de chatbots, atendimento automatizado, campanhas e integrações via API oficial do WhatsApp Business, em total conformidade com as políticas da Meta.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA -->
+  <section class="cta-strip">
+    <div class="container">
+      <h3>Pronto para <span>impulsionar</span> seu negócio?</h3>
+      <p>Fale com nossos especialistas e descubra como a Viteon pode transformar a sua operação com soluções integradas de tecnologia e marketing.</p>
+      <a class="btn btn-primary" onclick="navTo('contato')">Solicitar Atendimento</a>
+    </div>
+  </section>
+
+  <!-- CONTATO -->
+  <section class="contato" id="contato">
+    <div class="container">
+      <div class="section-title">
+        <small>Entre em Contato</small>
+        <h2>Vamos <span>Conversar</span></h2>
+        <div class="divider"></div>
+        <p>Estamos prontos para entender o seu desafio e construir a solução ideal para o seu negócio.</p>
+      </div>
+
+      <div class="contato-grid">
+        <div class="contato-info">
+          <h3>Informações de <span>Contato</span></h3>
+          <div class="contato-item">
+            <div class="icon">@</div>
+            <div class="info-text">
+              <strong>E-mail</strong>
+              <a href="mailto:contato@viteon.com.br">contato@viteon.com.br</a>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="icon">☎</div>
+            <div class="info-text">
+              <strong>Telefone</strong>
+              <a href="tel:+551133005599">(11) 3300-5599</a>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="icon">⌖</div>
+            <div class="info-text">
+              <strong>Endereço</strong>
+              <span>Alameda Rio Negro, 503, Sala 2020<br>Barueri – São Paulo<br>CEP 06454-000</span>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="icon">⌘</div>
+            <div class="info-text">
+              <strong>Horário de Atendimento</strong>
+              <span>Segunda a sexta, das 09h às 18h</span>
+            </div>
+          </div>
+          <div class="contato-item">
+            <div class="icon">#</div>
+            <div class="info-text">
+              <strong>CNPJ</strong>
+              <span>66.492.459/0001-68</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="contato-form">
+          <h3>Envie sua <span style="color:var(--vermelho)">mensagem</span></h3>
+          <div class="alert-success" id="alertOk">Mensagem enviada com sucesso! Entraremos em contato em breve.</div>
+          <form id="contatoForm" onsubmit="enviarForm(event)">
+            <div class="form-group">
+              <label for="nome">Nome completo *</label>
+              <input type="text" id="nome" name="nome" required>
+            </div>
+            <div class="form-group">
+              <label for="email">E-mail *</label>
+              <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+              <label for="telefone">Telefone</label>
+              <input type="tel" id="telefone" name="telefone">
+            </div>
+            <div class="form-group">
+              <label for="assunto">Assunto *</label>
+              <select id="assunto" name="assunto" required>
+                <option value="">Selecione...</option>
+                <option>Desenvolvimento de Software</option>
+                <option>Consultoria em TI</option>
+                <option>Marketing Digital</option>
+                <option>WhatsApp Business API</option>
+                <option>Treinamento Profissional</option>
+                <option>Outros assuntos</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label for="mensagem">Mensagem *</label>
+              <textarea id="mensagem" name="mensagem" required></textarea>
+            </div>
+            <div class="form-check">
+              <input type="checkbox" id="lgpd" required>
+              <label for="lgpd">Concordo com a <a onclick="showPage('privacidade')" style="color:var(--vermelho);cursor:pointer">Política de Privacidade</a> e autorizo o tratamento dos meus dados conforme a LGPD.</label>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width:100%">Enviar Mensagem</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+</div>
+
+<!-- ============= PÁGINA PRIVACIDADE ============= -->
+<div class="page" id="page-privacidade">
+  <div class="legal-page">
+    <div class="container legal-content">
+      <a class="back-link" onclick="showPage('home')">← Voltar ao site</a>
+      <h1>Política de Privacidade</h1>
+      <p class="updated">Última atualização: 11 de maio de 2026</p>
+
+      <div class="highlight-box">
+        <p>A <strong>Viteon Soluções Integradas LTDA</strong>, inscrita no CNPJ 66.492.459/0001-68, com sede na Alameda Rio Negro, 503, Sala 2020, Barueri/SP, CEP 06454-000 ("Viteon", "nós"), valoriza a privacidade dos titulares de dados pessoais e está comprometida com o cumprimento integral da Lei nº 13.709/2018 – <strong>Lei Geral de Proteção de Dados Pessoais (LGPD)</strong>.</p>
+      </div>
+
+      <h2>1. Introdução</h2>
+      <p>Esta Política de Privacidade descreve como coletamos, utilizamos, armazenamos, compartilhamos e protegemos as informações pessoais de visitantes, clientes, parceiros e usuários dos nossos serviços, incluindo aqueles que interagem conosco por meio do nosso site, e-mail, telefone, WhatsApp Business API e demais canais de comunicação.</p>
+      <p>Ao utilizar nossos serviços ou navegar em nosso site, você reconhece que leu, compreendeu e concorda com os termos desta Política.</p>
+
+      <h2>2. Definições (LGPD)</h2>
+      <ul>
+        <li><strong>Dados pessoais:</strong> qualquer informação relacionada a pessoa natural identificada ou identificável.</li>
+        <li><strong>Dados pessoais sensíveis:</strong> dados sobre origem racial ou étnica, convicção religiosa, opinião política, saúde, vida sexual, dados genéticos ou biométricos.</li>
+        <li><strong>Titular:</strong> pessoa natural a quem se referem os dados pessoais.</li>
+        <li><strong>Controlador:</strong> pessoa física ou jurídica a quem competem as decisões referentes ao tratamento de dados pessoais. No âmbito desta Política, a Viteon atua como Controladora.</li>
+        <li><strong>Operador:</strong> pessoa que realiza o tratamento de dados em nome do controlador.</li>
+        <li><strong>Tratamento:</strong> qualquer operação realizada com dados pessoais (coleta, classificação, uso, acesso, armazenamento, eliminação etc.).</li>
+        <li><strong>Encarregado (DPO):</strong> pessoa indicada para atuar como canal de comunicação entre o controlador, os titulares e a Autoridade Nacional de Proteção de Dados (ANPD).</li>
+      </ul>
+
+      <h2>3. Dados Pessoais que Coletamos</h2>
+      <h3>3.1 Dados fornecidos diretamente por você</h3>
+      <ul>
+        <li>Nome completo</li>
+        <li>E-mail</li>
+        <li>Telefone / WhatsApp</li>
+        <li>Empresa, cargo e CNPJ</li>
+        <li>Conteúdo das mensagens enviadas via formulários, e-mail, telefone ou WhatsApp Business</li>
+        <li>Informações comerciais necessárias à prestação dos serviços contratados</li>
+      </ul>
+      <h3>3.2 Dados coletados automaticamente</h3>
+      <ul>
+        <li>Endereço IP</li>
+        <li>Tipo e versão do navegador, sistema operacional e dispositivo</li>
+        <li>Páginas visitadas, tempo de navegação e fonte de tráfego</li>
+        <li>Cookies e identificadores similares (consulte nossa Política de Cookies)</li>
+      </ul>
+      <h3>3.3 Dados coletados de terceiros</h3>
+      <p>Quando aplicável, podemos receber dados a partir de plataformas como Meta (Facebook/Instagram/WhatsApp), Google, parceiros comerciais e fontes públicas, sempre respeitando as bases legais previstas na LGPD.</p>
+
+      <h2>4. Finalidades do Tratamento</h2>
+      <p>Tratamos seus dados pessoais para as seguintes finalidades:</p>
+      <ul>
+        <li>Prestar os serviços contratados e cumprir obrigações contratuais;</li>
+        <li>Responder solicitações, dúvidas e suporte técnico;</li>
+        <li>Enviar comunicações comerciais, propostas, orçamentos e materiais informativos (com consentimento);</li>
+        <li>Realizar atendimento e relacionamento via WhatsApp Business API e demais canais;</li>
+        <li>Cumprir obrigações legais, regulatórias, fiscais e tributárias;</li>
+        <li>Exercer regularmente nossos direitos em processos judiciais, administrativos ou arbitrais;</li>
+        <li>Prevenir fraudes, garantir a segurança das informações e dos sistemas;</li>
+        <li>Melhorar nossos serviços, site e experiência do usuário, por meio de análises estatísticas.</li>
+      </ul>
+
+      <h2>5. Bases Legais</h2>
+      <p>O tratamento de dados pessoais pela Viteon está fundamentado nas hipóteses legais previstas no art. 7º da LGPD, dentre as quais:</p>
+      <ul>
+        <li>Consentimento do titular;</li>
+        <li>Cumprimento de obrigação legal ou regulatória;</li>
+        <li>Execução de contrato ou procedimentos preliminares;</li>
+        <li>Exercício regular de direitos em processos;</li>
+        <li>Legítimo interesse do controlador ou de terceiros, observados os direitos do titular;</li>
+        <li>Proteção do crédito.</li>
+      </ul>
+
+      <h2>6. Compartilhamento de Dados</h2>
+      <p>A Viteon não comercializa dados pessoais. Podemos compartilhar dados com:</p>
+      <ul>
+        <li><strong>Prestadores de serviço e operadores</strong> contratados (hospedagem, e-mail, CRM, ferramentas de marketing, processamento de pagamentos), sempre sob contrato e obrigações de confidencialidade;</li>
+        <li><strong>Plataformas de mensageria e marketing</strong>, como Meta (WhatsApp Business API), Google e similares, conforme necessário à prestação do serviço;</li>
+        <li><strong>Autoridades públicas</strong>, mediante requisição legal, ordem judicial ou para cumprimento de obrigação legal;</li>
+        <li><strong>Empresas do mesmo grupo econômico</strong>, quando aplicável, observadas as finalidades originalmente informadas.</li>
+      </ul>
+
+      <h2>7. Transferência Internacional</h2>
+      <p>Algumas das ferramentas que utilizamos podem armazenar dados em servidores localizados fora do Brasil. Nesses casos, garantimos que a transferência ocorra em conformidade com a LGPD, com adoção de salvaguardas técnicas e contratuais adequadas.</p>
+
+      <h2>8. Armazenamento e Retenção</h2>
+      <p>Os dados pessoais são armazenados pelo tempo necessário ao cumprimento das finalidades para as quais foram coletados, ou pelo prazo exigido por lei. Após esse período, os dados são eliminados de forma segura ou anonimizados, salvo nas hipóteses de guarda obrigatória previstas em lei.</p>
+
+      <h2>9. Segurança da Informação</h2>
+      <p>Adotamos medidas técnicas e organizacionais adequadas para proteger seus dados contra acessos não autorizados, perda, alteração, destruição ou qualquer forma de tratamento inadequado, incluindo:</p>
+      <ul>
+        <li>Criptografia em trânsito (HTTPS/TLS);</li>
+        <li>Controles rigorosos de acesso e autenticação;</li>
+        <li>Monitoramento de sistemas e registros de auditoria;</li>
+        <li>Treinamento contínuo da equipe;</li>
+        <li>Política interna de segurança da informação.</li>
+      </ul>
+
+      <h2>10. Direitos do Titular</h2>
+      <p>Nos termos do art. 18 da LGPD, você pode exercer, a qualquer momento, os seguintes direitos:</p>
+      <ul>
+        <li>Confirmação da existência de tratamento;</li>
+        <li>Acesso aos dados;</li>
+        <li>Correção de dados incompletos, inexatos ou desatualizados;</li>
+        <li>Anonimização, bloqueio ou eliminação de dados desnecessários, excessivos ou tratados em desconformidade;</li>
+        <li>Portabilidade dos dados a outro fornecedor de serviço;</li>
+        <li>Eliminação dos dados tratados com consentimento;</li>
+        <li>Informação das entidades públicas e privadas com as quais compartilhamos dados;</li>
+        <li>Informação sobre a possibilidade de não fornecer consentimento e suas consequências;</li>
+        <li>Revogação do consentimento.</li>
+      </ul>
+      <p>Para exercer seus direitos, envie solicitação para <a href="mailto:contato@viteon.com.br">contato@viteon.com.br</a>.</p>
+
+      <h2>11. Cookies</h2>
+      <p>Utilizamos cookies e tecnologias similares para melhorar sua experiência. Para detalhes, consulte nossa <a onclick="showPage('cookies')" style="cursor:pointer">Política de Cookies</a>.</p>
+
+      <h2>12. Crianças e Adolescentes</h2>
+      <p>Nossos serviços não são direcionados a menores de 18 anos. Não coletamos intencionalmente dados de crianças e adolescentes sem o consentimento específico e em destaque dos pais ou responsáveis.</p>
+
+      <h2>13. Alterações desta Política</h2>
+      <p>Esta Política poderá ser atualizada periodicamente. A versão vigente estará sempre disponível em nosso site, com a respectiva data de atualização.</p>
+
+      <h2>14. Encarregado (DPO) e Contato</h2>
+      <p>Para dúvidas, solicitações ou comunicações sobre proteção de dados pessoais:</p>
+      <ul>
+        <li><strong>E-mail:</strong> <a href="mailto:contato@viteon.com.br">contato@viteon.com.br</a></li>
+        <li><strong>Telefone:</strong> (11) 3300-5599</li>
+        <li><strong>Endereço:</strong> Alameda Rio Negro, 503, Sala 2020, Barueri/SP, CEP 06454-000</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PÁGINA EXCLUSÃO DE DADOS ============= -->
+<div class="page" id="page-exclusao">
+  <div class="legal-page">
+    <div class="container legal-content">
+      <a class="back-link" onclick="showPage('home')">← Voltar ao site</a>
+      <h1>Política de Exclusão de Dados do Usuário</h1>
+      <p class="updated">Última atualização: 11 de maio de 2026</p>
+
+      <div class="highlight-box">
+        <p>Esta página atende aos requisitos da <strong>Meta Platforms, Inc.</strong> (Facebook, Instagram e WhatsApp Business API) e à <strong>Lei Geral de Proteção de Dados (LGPD - Lei nº 13.709/2018)</strong> brasileira, garantindo ao titular o direito de solicitar a exclusão de seus dados pessoais.</p>
+        <p style="margin-top:12px"><strong>URL pública para exclusão:</strong> <a href="https://viteon.com.br/exclusao-de-dados">https://viteon.com.br/exclusao-de-dados</a></p>
+      </div>
+
+      <h2>1. Sobre esta Política</h2>
+      <p>A <strong>Viteon Soluções Integradas LTDA</strong> (CNPJ 66.492.459/0001-68) respeita o direito dos titulares de dados pessoais de solicitar, a qualquer momento, a exclusão de suas informações coletadas e armazenadas em nossos sistemas, incluindo dados obtidos por meio de integrações com plataformas da Meta (Facebook, Instagram e WhatsApp Business API).</p>
+
+      <h2>2. Quais dados podem ser excluídos</h2>
+      <p>Mediante solicitação, podem ser excluídos:</p>
+      <ul>
+        <li>Nome, e-mail, telefone e demais dados de contato;</li>
+        <li>Histórico de mensagens trocadas via WhatsApp Business, Messenger ou Instagram Direct;</li>
+        <li>Identificadores de usuário oriundos das plataformas Meta;</li>
+        <li>Dados de navegação e interações associadas à sua conta;</li>
+        <li>Quaisquer outros dados pessoais cuja base legal de tratamento seja o consentimento.</li>
+      </ul>
+
+      <h2>3. Como solicitar a exclusão de dados</h2>
+      <p>Você pode solicitar a exclusão dos seus dados de duas formas:</p>
+
+      <h3>3.1 Por e-mail (recomendado)</h3>
+      <p>Envie uma mensagem para <a href="mailto:contato@viteon.com.br?subject=Solicitação%20de%20Exclusão%20de%20Dados">contato@viteon.com.br</a> com o assunto <strong>"Solicitação de Exclusão de Dados"</strong>, contendo:</p>
+      <ul>
+        <li>Nome completo;</li>
+        <li>E-mail e/ou telefone associado aos dados;</li>
+        <li>Plataforma de origem (WhatsApp Business, Facebook, Instagram, formulário do site etc.);</li>
+        <li>Descrição dos dados que deseja excluir (ou pedido de exclusão total).</li>
+      </ul>
+
+      <h3>3.2 Pelo formulário abaixo</h3>
+      <div class="exclusao-form-box">
+        <h3>Formulário de Exclusão de Dados</h3>
+        <div class="alert-success" id="alertExclusao">Solicitação registrada! Você receberá uma confirmação no e-mail informado em até 48 horas.</div>
+        <form onsubmit="enviarExclusao(event)">
+          <div class="form-group">
+            <label for="exc-nome">Nome completo *</label>
+            <input type="text" id="exc-nome" required>
+          </div>
+          <div class="form-group">
+            <label for="exc-email">E-mail associado *</label>
+            <input type="email" id="exc-email" required>
+          </div>
+          <div class="form-group">
+            <label for="exc-tel">Telefone / WhatsApp associado</label>
+            <input type="tel" id="exc-tel" placeholder="Ex.: (11) 99999-9999">
+          </div>
+          <div class="form-group">
+            <label for="exc-plataforma">Plataforma de origem *</label>
+            <select id="exc-plataforma" required>
+              <option value="">Selecione...</option>
+              <option>WhatsApp Business</option>
+              <option>Facebook / Messenger</option>
+              <option>Instagram</option>
+              <option>Formulário do site</option>
+              <option>E-mail / Atendimento</option>
+              <option>Não sei informar</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label for="exc-desc">Descrição da solicitação</label>
+            <textarea id="exc-desc" placeholder="Informe quais dados deseja excluir ou se solicita exclusão total."></textarea>
+          </div>
+          <div class="form-check">
+            <input type="checkbox" id="exc-confirmo" required>
+            <label for="exc-confirmo">Confirmo que sou o titular dos dados e estou ciente de que a exclusão é irreversível, podendo impactar serviços ativos.</label>
+          </div>
+          <button type="submit" class="btn btn-primary">Solicitar Exclusão</button>
+        </form>
+      </div>
+
+      <h2>4. Prazo de atendimento</h2>
+      <p>A Viteon analisará e responderá sua solicitação em até <strong>15 (quinze) dias</strong>, conforme prazo recomendado pela ANPD. Em caso de exclusão, os dados serão removidos definitivamente dos nossos sistemas, ressalvadas as hipóteses de guarda obrigatória previstas em lei (art. 16, LGPD), tais como:</p>
+      <ul>
+        <li>Cumprimento de obrigação legal ou regulatória;</li>
+        <li>Estudo por órgão de pesquisa, com anonimização quando possível;</li>
+        <li>Transferência a terceiros, desde que respeitados os requisitos legais;</li>
+        <li>Uso exclusivo do controlador, vedado o acesso por terceiros, desde que anonimizados.</li>
+      </ul>
+
+      <h2>5. Confirmação da exclusão</h2>
+      <p>Após a exclusão, enviaremos uma confirmação para o e-mail informado, contendo o número de protocolo e o registro da operação.</p>
+
+      <h2>6. Exclusão de dados via Meta / Facebook</h2>
+      <p>Se você utilizou login social do Facebook, Instagram ou WhatsApp para interagir com nossos serviços, também pode revogar o acesso e solicitar a remoção dos dados diretamente nas configurações da sua conta nessas plataformas:</p>
+      <ul>
+        <li><strong>Facebook:</strong> Configurações &gt; Apps e Sites &gt; Remover Viteon</li>
+        <li><strong>Instagram:</strong> Configurações &gt; Segurança &gt; Apps e Sites</li>
+        <li><strong>WhatsApp:</strong> Configurações &gt; Conta &gt; Solicitar informações da conta</li>
+      </ul>
+
+      <h2>7. Contato do Encarregado (DPO)</h2>
+      <p>Para dúvidas relacionadas à exclusão ou tratamento de dados:</p>
+      <ul>
+        <li><strong>E-mail:</strong> <a href="mailto:contato@viteon.com.br">contato@viteon.com.br</a></li>
+        <li><strong>Telefone:</strong> (11) 3300-5599</li>
+        <li><strong>Endereço:</strong> Alameda Rio Negro, 503, Sala 2020, Barueri/SP, CEP 06454-000</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PÁGINA TERMOS ============= -->
+<div class="page" id="page-termos">
+  <div class="legal-page">
+    <div class="container legal-content">
+      <a class="back-link" onclick="showPage('home')">← Voltar ao site</a>
+      <h1>Termos de Serviço</h1>
+      <p class="updated">Última atualização: 11 de maio de 2026</p>
+
+      <div class="highlight-box">
+        <p>Estes Termos de Serviço regulam o uso do site e dos serviços oferecidos pela <strong>Viteon Soluções Integradas LTDA</strong>, inscrita no CNPJ 66.492.459/0001-68, com sede na Alameda Rio Negro, 503, Sala 2020, Barueri/SP, CEP 06454-000.</p>
+      </div>
+
+      <h2>1. Aceitação dos Termos</h2>
+      <p>Ao acessar, navegar ou utilizar o site <a href="https://viteon.com.br">viteon.com.br</a> e/ou contratar quaisquer serviços oferecidos pela Viteon, o usuário declara ter lido, compreendido e concordado integralmente com estes Termos de Serviço, com a Política de Privacidade e com a Política de Cookies.</p>
+      <p>Caso o usuário não concorde com qualquer disposição destes Termos, deverá interromper imediatamente o uso do site e dos serviços.</p>
+
+      <h2>2. Definições</h2>
+      <ul>
+        <li><strong>Viteon:</strong> Viteon Soluções Integradas LTDA;</li>
+        <li><strong>Site:</strong> o domínio viteon.com.br e seus subdomínios;</li>
+        <li><strong>Usuário:</strong> qualquer pessoa, física ou jurídica, que acessa o site ou contrata serviços;</li>
+        <li><strong>Cliente:</strong> Usuário que celebra contrato com a Viteon;</li>
+        <li><strong>Serviços:</strong> conjunto de soluções ofertadas pela Viteon, incluindo desenvolvimento de software, consultoria em TI, marketing digital, treinamento profissional, produção de conteúdo, intermediação de negócios, dentre outros.</li>
+      </ul>
+
+      <h2>3. Objeto</h2>
+      <p>Estes Termos têm por objeto regular as condições gerais de uso do Site e a contratação dos Serviços oferecidos pela Viteon, sem prejuízo da assinatura de contratos específicos para cada serviço, que prevalecerão em caso de conflito com este instrumento.</p>
+
+      <h2>4. Cadastro e Contratação</h2>
+      <p>Determinados serviços poderão exigir cadastro prévio. O Usuário compromete-se a fornecer informações verdadeiras, exatas, atualizadas e completas, sendo responsável pela veracidade de todos os dados informados.</p>
+      <p>A contratação dos serviços ocorrerá mediante celebração de contrato específico, proposta comercial aceita, ordem de serviço ou qualquer outro instrumento equivalente.</p>
+
+      <h2>5. Obrigações do Usuário</h2>
+      <p>O Usuário compromete-se a:</p>
+      <ul>
+        <li>Utilizar o Site e os Serviços conforme a legislação vigente, a moral, os bons costumes e estes Termos;</li>
+        <li>Não praticar atos ilícitos ou que prejudiquem a Viteon, terceiros ou os sistemas;</li>
+        <li>Não realizar engenharia reversa, descompilação, cópia não autorizada ou modificação dos serviços e softwares;</li>
+        <li>Não inserir vírus, malwares ou códigos maliciosos;</li>
+        <li>Manter sigilo sobre credenciais de acesso quando aplicável;</li>
+        <li>Pagar pontualmente os valores devidos pelos Serviços contratados.</li>
+      </ul>
+
+      <h2>6. Obrigações da Viteon</h2>
+      <ul>
+        <li>Prestar os Serviços com diligência, qualidade e tempestividade;</li>
+        <li>Manter sigilo e confidencialidade sobre as informações dos Clientes;</li>
+        <li>Cumprir a LGPD e demais normas aplicáveis;</li>
+        <li>Disponibilizar canais de atendimento para suporte e dúvidas;</li>
+        <li>Comunicar previamente alterações relevantes nestes Termos.</li>
+      </ul>
+
+      <h2>7. Propriedade Intelectual</h2>
+      <p>Todos os direitos de propriedade intelectual sobre o Site, marca, logotipo, layout, textos, imagens, vídeos, códigos-fonte, metodologias, materiais didáticos e demais elementos pertencem exclusivamente à Viteon ou a terceiros que tenham autorizado seu uso.</p>
+      <p>Salvo autorização expressa, é vedada a reprodução, distribuição, modificação ou utilização comercial de qualquer conteúdo.</p>
+      <p>Em projetos sob medida, a titularidade dos entregáveis será regulada pelo contrato específico firmado entre as partes.</p>
+
+      <h2>8. Pagamentos</h2>
+      <p>Os valores, formas de pagamento, prazos e condições serão definidos em proposta comercial e/ou contrato específico. O atraso no pagamento implicará incidência de multa de 2%, juros de mora de 1% ao mês e correção monetária pelo IPCA, sem prejuízo da suspensão dos serviços.</p>
+
+      <h2>9. Limitação de Responsabilidade</h2>
+      <p>A Viteon empenhará seus melhores esforços para a prestação dos Serviços, contudo não se responsabiliza por:</p>
+      <ul>
+        <li>Falhas, interrupções ou indisponibilidades decorrentes de caso fortuito, força maior, ataques cibernéticos, ações de terceiros, falhas em redes públicas de telecomunicações, energia ou serviços de hospedagem;</li>
+        <li>Danos indiretos, lucros cessantes, perda de chance ou qualquer dano não previsto contratualmente;</li>
+        <li>Uso inadequado dos serviços pelo Usuário ou por terceiros;</li>
+        <li>Conteúdo de sites externos eventualmente vinculados;</li>
+        <li>Decisões comerciais tomadas pelo Cliente com base em consultorias, treinamentos ou materiais fornecidos.</li>
+      </ul>
+      <p>Em qualquer hipótese, a responsabilidade total da Viteon ficará limitada ao valor efetivamente pago pelo Cliente nos 12 (doze) meses anteriores ao evento que deu causa à reclamação.</p>
+
+      <h2>10. Confidencialidade</h2>
+      <p>As partes se comprometem a manter sigilo sobre todas as informações confidenciais a que tiverem acesso em razão da relação comercial, durante a vigência do contrato e por 5 (cinco) anos após seu término.</p>
+
+      <h2>11. Proteção de Dados Pessoais</h2>
+      <p>O tratamento de dados pessoais observará a LGPD e a <a onclick="showPage('privacidade')" style="cursor:pointer">Política de Privacidade</a> da Viteon.</p>
+
+      <h2>12. Rescisão</h2>
+      <p>Os Serviços poderão ser rescindidos por qualquer das partes, observados os prazos e condições previstos em contrato específico. A Viteon poderá suspender imediatamente o acesso ao Usuário que descumprir estes Termos, sem prejuízo de eventuais perdas e danos.</p>
+
+      <h2>13. Alterações dos Termos</h2>
+      <p>A Viteon poderá alterar estes Termos a qualquer momento, com publicação da versão atualizada no Site. O uso continuado após as alterações representa aceitação tácita.</p>
+
+      <h2>14. Disposições Gerais</h2>
+      <p>A tolerância quanto ao descumprimento de qualquer cláusula não constituirá novação ou renúncia. Caso qualquer cláusula seja considerada inválida, as demais permanecerão em vigor.</p>
+
+      <h2>15. Lei Aplicável e Foro</h2>
+      <p>Estes Termos são regidos pela legislação brasileira. Fica eleito o <strong>Foro da Comarca de Barueri, Estado de São Paulo</strong>, como o único competente para dirimir quaisquer questões oriundas destes Termos, com renúncia expressa a qualquer outro, por mais privilegiado que seja.</p>
+
+      <h2>16. Contato</h2>
+      <p>Dúvidas sobre estes Termos podem ser enviadas para:</p>
+      <ul>
+        <li><strong>E-mail:</strong> <a href="mailto:contato@viteon.com.br">contato@viteon.com.br</a></li>
+        <li><strong>Telefone:</strong> (11) 3300-5599</li>
+        <li><strong>Endereço:</strong> Alameda Rio Negro, 503, Sala 2020, Barueri/SP, CEP 06454-000</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============= PÁGINA COOKIES ============= -->
+<div class="page" id="page-cookies">
+  <div class="legal-page">
+    <div class="container legal-content">
+      <a class="back-link" onclick="showPage('home')">← Voltar ao site</a>
+      <h1>Política de Cookies</h1>
+      <p class="updated">Última atualização: 11 de maio de 2026</p>
+
+      <div class="highlight-box">
+        <p>A <strong>Viteon Soluções Integradas LTDA</strong> (CNPJ 66.492.459/0001-68) utiliza cookies e tecnologias semelhantes em seu site <a href="https://viteon.com.br">viteon.com.br</a> com o objetivo de oferecer uma melhor experiência de navegação, em conformidade com a LGPD.</p>
+      </div>
+
+      <h2>1. O que são cookies?</h2>
+      <p>Cookies são pequenos arquivos de texto armazenados no navegador ou dispositivo do usuário quando este visita um site. Eles permitem reconhecer o navegador, lembrar preferências, manter sessões ativas e coletar informações sobre a navegação.</p>
+
+      <h2>2. Tipos de cookies que utilizamos</h2>
+
+      <h3>2.1 Cookies Estritamente Necessários</h3>
+      <p>Essenciais para o funcionamento do site. Sem eles, partes do site podem não funcionar corretamente. Esses cookies não armazenam informações pessoais identificáveis e não dependem de consentimento.</p>
+
+      <h3>2.2 Cookies de Desempenho e Analíticos</h3>
+      <p>Coletam informações sobre como os usuários navegam no site, permitindo medir e melhorar a experiência. Podem ser utilizadas ferramentas como Google Analytics, Meta Pixel e similares.</p>
+
+      <h3>2.3 Cookies de Funcionalidade</h3>
+      <p>Permitem que o site lembre escolhas feitas pelo usuário (idioma, região, preferências) para oferecer recursos mais personalizados.</p>
+
+      <h3>2.4 Cookies de Publicidade e Marketing</h3>
+      <p>Utilizados para exibir anúncios mais relevantes ao usuário, dentro e fora do nosso site, podendo incluir tecnologias de remarketing da Meta (Facebook/Instagram), Google Ads e parceiros.</p>
+
+      <h2>3. Cookies de terceiros</h2>
+      <p>Algumas funcionalidades do site são fornecidas por terceiros que também podem definir cookies. Não temos controle sobre esses cookies, mas listamos os principais parceiros utilizados:</p>
+      <ul>
+        <li><strong>Google</strong> (Analytics, Tag Manager, Ads, reCAPTCHA);</li>
+        <li><strong>Meta Platforms</strong> (Pixel do Facebook, conversões do Instagram, WhatsApp);</li>
+        <li><strong>Plataformas de hospedagem e CDN</strong>;</li>
+        <li><strong>Ferramentas de e-mail marketing e CRM</strong>.</li>
+      </ul>
+
+      <h2>4. Gerenciamento de cookies</h2>
+      <p>Ao acessar o site, você poderá optar por aceitar ou recusar os cookies não essenciais por meio do <strong>banner de consentimento</strong>. Sua escolha será armazenada por 12 meses, podendo ser revisada a qualquer momento limpando os cookies do navegador.</p>
+      <p>Você também pode configurar diretamente em seu navegador o bloqueio total ou parcial de cookies. Consulte as instruções do seu navegador:</p>
+      <ul>
+        <li>Google Chrome</li>
+        <li>Mozilla Firefox</li>
+        <li>Microsoft Edge</li>
+        <li>Apple Safari</li>
+      </ul>
+      <p>A desativação de determinados cookies pode comprometer parcialmente a experiência de navegação.</p>
+
+      <h2>5. Atualização das suas preferências</h2>
+      <p>Para revisar suas preferências de cookies neste site, clique abaixo:</p>
+      <p><a class="btn btn-primary" style="display:inline-block;color:#fff" onclick="reabrirCookies()">Gerenciar Cookies</a></p>
+
+      <h2>6. Alterações desta Política</h2>
+      <p>Esta Política poderá ser revisada periodicamente. Recomendamos a consulta regular desta página para verificar eventuais atualizações.</p>
+
+      <h2>7. Contato</h2>
+      <ul>
+        <li><strong>E-mail:</strong> <a href="mailto:contato@viteon.com.br">contato@viteon.com.br</a></li>
+        <li><strong>Telefone:</strong> (11) 3300-5599</li>
+        <li><strong>Endereço:</strong> Alameda Rio Negro, 503, Sala 2020, Barueri/SP, CEP 06454-000</li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+<!-- ============= FOOTER ============= -->
+<footer>
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <div class="footer-logo">
+          <div class="logo-icon">V</div>
+          <div>VITE<span>ON</span></div>
+        </div>
+        <p>Soluções integradas em tecnologia, consultoria, marketing digital e treinamento profissional para impulsionar empresas na era digital.</p>
+        <div class="footer-cnpj">
+          <strong>Viteon Soluções Integradas LTDA</strong>
+          CNPJ: 66.492.459/0001-68<br>
+          Alameda Rio Negro, 503, Sala 2020<br>
+          Barueri/SP – CEP 06454-000
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h5>Navegação</h5>
+        <ul>
+          <li><a onclick="showPage('home');navTo('home-section')">Início</a></li>
+          <li><a onclick="showPage('home');navTo('sobre')">Sobre Nós</a></li>
+          <li><a onclick="showPage('home');navTo('servicos')">Serviços</a></li>
+          <li><a onclick="showPage('home');navTo('contato')">Contato</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Documentos Legais</h5>
+        <ul>
+          <li><a onclick="showPage('privacidade')">Política de Privacidade</a></li>
+          <li><a onclick="showPage('exclusao')">Exclusão de Dados</a></li>
+          <li><a onclick="showPage('termos')">Termos de Serviço</a></li>
+          <li><a onclick="showPage('cookies')">Política de Cookies</a></li>
+          <li><a onclick="reabrirCookies()">Gerenciar Cookies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Contato</h5>
+        <ul>
+          <li><a href="mailto:contato@viteon.com.br">contato@viteon.com.br</a></li>
+          <li><a href="tel:+551133005599">(11) 3300-5599</a></li>
+          <li>Seg. a sex.<br>09h às 18h</li>
+          <li><a href="https://viteon.com.br">viteon.com.br</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      © 2026 <span>Viteon Soluções Integradas LTDA</span>. Todos os direitos reservados. CNPJ 66.492.459/0001-68.
+    </div>
+  </div>
+</footer>
+
+<!-- ============= COOKIE BANNER ============= -->
+<div class="cookie-banner" id="cookieBanner">
+  <div class="cookie-content">
+    <div class="cookie-text">
+      <h4>🍪 Utilizamos Cookies</h4>
+      <p>Este site utiliza cookies para melhorar sua experiência de navegação, analisar o tráfego e personalizar conteúdo. Ao continuar navegando, você concorda com nossa <a onclick="showPage('cookies')">Política de Cookies</a> e <a onclick="showPage('privacidade')">Política de Privacidade</a>, em conformidade com a LGPD.</p>
+    </div>
+    <div class="cookie-actions">
+      <button class="btn-reject" onclick="cookieDecision('rejected')">Recusar</button>
+      <button class="btn-accept" onclick="cookieDecision('accepted')">Aceitar Todos</button>
+    </div>
+  </div>
+</div>
+
+<script>
+/* ============ NAVEGAÇÃO ENTRE PÁGINAS ============ */
+function showPage(id){
+  document.querySelectorAll('.page').forEach(p=>p.classList.remove('active'));
+  const target = document.getElementById('page-'+id);
+  if(target) target.classList.add('active');
+  window.scrollTo({top:0,behavior:'instant'});
+  closeMenu();
+}
+
+/* ============ NAVEGAÇÃO ANCORA ============ */
+function navTo(secId){
+  closeMenu();
+  setTimeout(()=>{
+    const el=document.getElementById(secId);
+    if(el) el.scrollIntoView({behavior:'smooth'});
+  },50);
+}
+
+/* ============ MENU MOBILE ============ */
+function toggleMenu(){
+  document.getElementById('mainNav').classList.toggle('open');
+}
+function closeMenu(){
+  document.getElementById('mainNav').classList.remove('open');
+}
+
+/* ============ COOKIE BANNER ============ */
+function getCookie(name){
+  const m=document.cookie.match(new RegExp('(?:^|; )'+name+'=([^;]*)'));
+  return m?decodeURIComponent(m[1]):null;
+}
+function setCookie(name,val,days){
+  const d=new Date();
+  d.setTime(d.getTime()+days*24*60*60*1000);
+  document.cookie=name+'='+encodeURIComponent(val)+';expires='+d.toUTCString()+';path=/;SameSite=Lax';
+}
+function cookieDecision(value){
+  setCookie('viteon_cookie_consent',value,365);
+  document.getElementById('cookieBanner').classList.remove('show');
+}
+function reabrirCookies(){
+  document.cookie='viteon_cookie_consent=;expires=Thu, 01 Jan 1970 00:00:01 GMT;path=/';
+  document.getElementById('cookieBanner').classList.add('show');
+  showPage('home');
+}
+window.addEventListener('load',()=>{
+  if(!getCookie('viteon_cookie_consent')){
+    setTimeout(()=>document.getElementById('cookieBanner').classList.add('show'),800);
+  }
+});
+
+/* ============ FORMULÁRIOS ============ */
+function enviarForm(e){
+  e.preventDefault();
+  document.getElementById('alertOk').classList.add('show');
+  document.getElementById('contatoForm').reset();
+  setTimeout(()=>document.getElementById('alertOk').classList.remove('show'),6000);
+}
+function enviarExclusao(e){
+  e.preventDefault();
+  document.getElementById('alertExclusao').classList.add('show');
+  e.target.reset();
+  setTimeout(()=>document.getElementById('alertExclusao').classList.remove('show'),8000);
+}
+
+/* ============ SUPORTE A URL DIRETA ============ */
+window.addEventListener('DOMContentLoaded',()=>{
+  const path=window.location.pathname.toLowerCase();
+  const hash=window.location.hash.toLowerCase();
+  if(path.includes('exclusao-de-dados')||hash.includes('exclusao')) showPage('exclusao');
+  else if(path.includes('privacidade')||hash.includes('privacidade')) showPage('privacidade');
+  else if(path.includes('termos')||hash.includes('termos')) showPage('termos');
+  else if(path.includes('cookies')||hash.includes('cookies')) showPage('cookies');
+});
+</script>
+
+</body>
+</html>
